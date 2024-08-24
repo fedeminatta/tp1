@@ -41,3 +41,21 @@ def es_abc(palabra):
 palabra = input("Ingrese una palabra: ")
 
 print(es_abc(palabra))
+
+
+
+#Mateo punto 1-C
+"""Escriba un procedimiento procesar_palabras(entrada) que acepte una
+secuencia de palabras separadas por coma, las ordene y las imprima.
+Suponiendo que la entrada provista al programa es la siguiente:
+te,felicito,que,bien,actuas
+La salida esperada es: actuas,bien,felicito,que,te"""
+
+def proocesar_palabras(entrada):
+    lista= entrada.split(',')
+    ordenadas= sorted(lista)
+    salida= ','.join(ordenadas)
+    print(f"{salida}\n")
+    
+entrada_usuario= input("\nIngrese una secuencia de palabras separadas por coma: ")
+proocesar_palabras(entrada_usuario)
