@@ -1,3 +1,12 @@
+ # Joaquin punto 1-A) 
+def palabra_no_tiene_letras(palabra, letras_prohibidas):
+    for letra in palabra:
+        if letra in letras_prohibidas:
+            return False
+    return True
+
+
+
 # Fede punto 1-B
 def es_abc(palabra):
     palabra = palabra.lower()
@@ -25,7 +34,6 @@ def proocesar_palabras(entrada):
     
 entrada_usuario= input("\nIngrese una secuencia de palabras separadas por coma: ")
 proocesar_palabras(entrada_usuario)
-
 
 # Benja punto 1-D)
 def listas_diferencia(lista1, lista2):
