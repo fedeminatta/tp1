@@ -1,9 +1,38 @@
- # Joaquin punto 1-A) 
+# Joaquin punto 1-A)
 def palabra_no_tiene_letras(palabra, letras_prohibidas):
     for letra in palabra:
         if letra in letras_prohibidas:
             return False
     return True
+
+
+# Fede punto 1-B
+def es_abc(palabra):
+    palabra = palabra.lower()
+    return list(palabra) == sorted(palabra)
+
+
+palabra = input("Ingrese una palabra: ")
+
+print(es_abc(palabra))
+
+# Mateo punto 1-C
+"""Escriba un procedimiento procesar_palabras(entrada) que acepte una
+secuencia de palabras separadas por coma, las ordene y las imprima.
+Suponiendo que la entrada provista al programa es la siguiente:
+te,felicito,que,bien,actuas
+La salida esperada es: actuas,bien,felicito,que,te"""
+
+
+def proocesar_palabras(entrada):
+    lista = entrada.split(",")
+    ordenadas = sorted(lista)
+    salida = ",".join(ordenadas)
+    print(f"{salida}\n")
+
+
+entrada_usuario = input("\nIngrese una secuencia de palabras separadas por coma: ")
+proocesar_palabras(entrada_usuario)
 
 
 # Benja punto 1-D)
@@ -38,32 +67,3 @@ def numeros_par_impar(entrada):
 
 entrada_usuario = input("coloca una lista de números separados por coma: ")
 numeros_par_impar(entrada_usuario)
-
-
-# Fede punto 1-B
-def es_abc(palabra):
-    palabra = palabra.lower()
-    return list(palabra) == sorted(palabra)
-
-
-palabra = input("Ingrese una palabra: ")
-
-print(es_abc(palabra))
-
-
-
-#Mateo punto 1-C
-"""Escriba un procedimiento procesar_palabras(entrada) que acepte una
-secuencia de palabras separadas por coma, las ordene y las imprima.
-Suponiendo que la entrada provista al programa es la siguiente:
-te,felicito,que,bien,actuas
-La salida esperada es: actuas,bien,felicito,que,te"""
-
-def proocesar_palabras(entrada):
-    lista= entrada.split(',')
-    ordenadas= sorted(lista)
-    salida= ','.join(ordenadas)
-    print(f"{salida}\n")
-    
-entrada_usuario= input("\nIngrese una secuencia de palabras separadas por coma: ")
-proocesar_palabras(entrada_usuario)
