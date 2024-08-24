@@ -29,3 +29,31 @@ def numeros_par_impar(entrada):
 
 entrada_usuario = input("coloca una lista de números separados por coma: ")
 numeros_par_impar(entrada_usuario)
+
+# Benja punto 1-F)
+import re
+
+def contrasena_valida(contrasena):
+    if not (6 <= len(contrasena) <= 20):
+        return False
+    if not re.search(r'\d', contrasena):
+        return False
+    if len(re.findall(r'[A-Z]', contrasena)) < 2:
+        return False
+    if not re.search(r'[$&+,:;=?@#|<>.^*()%!-]', contrasena):
+        return False
+    if ' ' in contrasena:
+        return False
+    return True
+
+# Ejemplo de uso
+contraseñas = [
+    "abc.123",
+    "Abc.123",
+    "AbC.123",
+    "AbC.1 23",
+    "ÁbC.123"
+]
+
+for contrasena in contraseñas:
+    print(f"{contrasena} es válida: {contrasena_valida(contrasena)}")
