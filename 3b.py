@@ -19,3 +19,4 @@ def fibonacci(numero):
 numero = int(input("Ingrese un numero: "))
 resultado = fibonacci(numero)
 print(f"La secuencia de Fibonacci hasta {numero} es: {resultado}")
+# hola
