@@ -6,6 +6,10 @@ def palabra_no_tiene_letras(palabra, letras_prohibidas):
     return True
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> d039b2e911aa376013a5fc1f9adcad2d86fc4d27
 # Fede punto 1-B
 def es_abc(palabra):
     palabra = palabra.lower()
@@ -16,13 +20,30 @@ palabra = input("Ingrese una palabra: ")
 
 print(es_abc(palabra))
 
+<<<<<<< HEAD
+
+
+#Mateo punto 1-C
+=======
 # Mateo punto 1-C
+>>>>>>> d039b2e911aa376013a5fc1f9adcad2d86fc4d27
 """Escriba un procedimiento procesar_palabras(entrada) que acepte una
 secuencia de palabras separadas por coma, las ordene y las imprima.
 Suponiendo que la entrada provista al programa es la siguiente:
 te,felicito,que,bien,actuas
 La salida esperada es: actuas,bien,felicito,que,te"""
 
+<<<<<<< HEAD
+def proocesar_palabras(entrada):
+    lista= entrada.split(',')
+    ordenadas= sorted(lista)
+    salida= ','.join(ordenadas)
+    print(f"{salida}\n")
+    
+entrada_usuario= input("\nIngrese una secuencia de palabras separadas por coma: ")
+proocesar_palabras(entrada_usuario)
+
+=======
 
 def proocesar_palabras(entrada):
     lista = entrada.split(",")
@@ -35,6 +56,7 @@ entrada_usuario = input("\nIngrese una secuencia de palabras separadas por coma:
 proocesar_palabras(entrada_usuario)
 
 
+>>>>>>> d039b2e911aa376013a5fc1f9adcad2d86fc4d27
 # Benja punto 1-D)
 def listas_diferencia(lista1, lista2):
     set1 = set(lista1)
@@ -67,3 +89,32 @@ def numeros_par_impar(entrada):
 
 entrada_usuario = input("coloca una lista de números separados por coma: ")
 numeros_par_impar(entrada_usuario)
+
+
+# Benja punto 1-F)
+import re
+
+def contrasena_valida(contrasena):
+    if not (6 <= len(contrasena) <= 20):
+        return False
+    if not re.search(r'\d', contrasena):
+        return False
+    if len(re.findall(r'[A-Z]', contrasena)) < 2:
+        return False
+    if not re.search(r'[$&+,:;=?@#|<>.^*()%!-]', contrasena):
+        return False
+    if ' ' in contrasena:
+        return False
+    return True
+
+# Ejemplo de uso
+contraseñas = [
+    "abc.123",
+    "Abc.123",
+    "AbC.123",
+    "AbC.1 23",
+    "ÁbC.123"
+]
+
+for contrasena in contraseñas:
+    print(f"{contrasena} es válida: {contrasena_valida(contrasena)}")
