@@ -1,3 +1,10 @@
+# Joaquin Arce punto 1-A)
+def palabra_no_tiene_letras(palabra, letras_prohibidas):
+    for letra in palabra:
+        if letra in letras_prohibidas:
+            return False
+    return True 
+
 
 # Benja punto 1-D)
 def listas_diferencia(lista1, lista2):
